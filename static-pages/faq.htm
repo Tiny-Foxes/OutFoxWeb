@@ -1,0 +1,108 @@
+<h1>General</h1>
+
+<h2>What is StepMania 5.3?</h2>
+
+<p>A project to modernize the 5.0.x/5.1 codebase to improve its performance and provide enhanced support for modern hardware and operating systems. We are also adding new features, including those being requested by our community, as well as refurbishing its support of non-dance/4-key game types, adding new game types, and so forth.</p>
+
+<h2>What is Project Moondance?</h2>
+
+<p>It is a community/umbrella for Team Rizu (the 5.3 dev team), covering 5.3/Project OutFox as well as other related projects.</p>
+
+<h2>Will it still work with my old songs/themes/etc.?</h2>
+
+<p>5.3 builds upon the existing 5.0.12/5.1 beta codebase, and maintaining backwards compatibility with older content is one of our main priorities (in fact, this is one of the reasons why the version number is 5.3 rather than skipping to a higher number like 6.0). Content that worked on 5.0.12/5.1 (including songs, themes, and noteskins) should still work on 5.3. If you experience any issues/weirdness, please report it to us.</p>
+
+<h3>Side note for developers</h3>
+
+<p>Please note that we are deprecating the use of semicolon-separated <code>cmd()</code> blocks (i.e. &nbsp;<code>OnCommand=cmd(linear,1.5;diffusealpha,1);&nbsp;</code>) as a means of placing commands on actors in Lua scripts, as this method is a non-standard Lua function that was created for StepMania, and 5.3 is not optimized with this coding style in mind (themes may experience performance penalties if they use this method). It is strongly recommended that function chaining (i.e. code such as <code>OnCommand=function(self) self:linear(1.5):diffusealpha(1) end,&nbsp;</code>) be used instead.</p>
+
+<h2>Can I install it alongside existing versions?</h2>
+
+<p>Yes. Our installer on Windows also defaults to portable mode, so user profile data is stored in your installation directory.</p>
+
+<p>If you would like to have a shared song library between multiple builds, you can use the <code>AdditionalSongFolders</code> preference in <code>Save/Preferences.ini</code> to specify a path.</p>
+
+<h2>Will there be online support?</h2>
+
+<p>The existing SMO functionality is deprecated, but we have future plans to develop a revamped online system.</p>
+
+<h2>Where is the source code?/Why are you not open source?</h2>
+
+<p>Right now we are not maintaining a public code repository, but we will open one in the future (with plans for it to succeed 5.1 as the mainline branch in the StepMania repository). As 5.3 is developing at a rapid pace, allowing source code access at this time would allow users to compile their own builds based on incomplete work, which would be difficult for us to debug and support during this phase of development..</p>
+
+<p>Our code will be licensed under the Apache License 2.0, an open source license used by a variety of major projects (including Android) that provides stronger protections for our rights to be attributed for our work (particularly within forks), while maintaining the ability for StepMania to remain free and open source as it has always been.&nbsp;</p>
+
+<p><span style="background-color: transparent;">If you have any questions related to the 5.3 code&nbsp;</span><em style="background-color: transparent;">itself</em><span style="background-color: transparent;">, feel free to ask one of the development team members on our Discord server, and we'll be happy to discuss.</span></p>
+
+<blockquote class="blockquote">
+
+	<p>The project began as a method to add online and profiles to SM5, but when we looked into the engine to see how this could be appropriated, it was discovered just how much in a sorry state the codebase was, and it looked mostly abandoned. I spoke to Shakesoda in hopes of a resurrection in the form of a team project, and it was requested rather than breaking 10 years of content and community to take the time to make a proper 5.x build that is stable and supports what the community as a whole wants from the game.</p>
+
+	<p>This backward compatibility support has been an absolute git to do, but it's something now we are down the line which we are proud of, as it has brought many players and newcomers to the community, and provided a very stable experience for folks during the lockdown. We will continue to maintain a near 100% compatibility where we can, and this is taken into consideration whenever we plan a new feature or change engine components.</p>
+
+	<p>We asked if it was ok to close the source while this process was done, and it was deemed wise for the health of the repo and the need of people who are just wanting to play. Its why we've been around the repo but not on it as taint can happen and we do not wish this. SSC [Spinal Shark Collective, the 5.0.x development team] did this same behaviour before us, so we did not see it as a problem. Some vocal members of the community disagreed, including some of the SM dev team. We have also been compared to past SM repo contributors who may have left a less than savoury memory in the minds of some, and it has also been hard to differentiate from history we have no involvement with.</p>
+	<footer class="blockquote-footer">Squirrel</footer>
+</blockquote>
+
+<h2>Are there ways I can contribute?</h2>
+
+<ul>
+	<li>You can report bugs and make feature suggestions on our Discord server.</li>
+	<li><a href="https://github.com/Tiny-Foxes">TinyFoxes&nbsp;</a>is a branch of Project Moondance that is coordinating and hosting community-produced content for 5.3, such as translations and other add-ons.</li>
+</ul>
+
+<h2>What is 5.2 and why did you skip over it?</h2>
+
+<p>5.2 was originally intended to be the next version of StepMania. However, it included a number of major changes that broke compatibility with previous versions, and were not well-received by the community and other developers.</p>
+
+<p>5.2 was originally meant to be 5.1. However, in response to the reception, it was officially delayed in favour of a new 5.1 that was largely an update to 5.0.12 that did not break compatibility with existing content. This was done under the presumption that the new version (subsequently renamed 5.2) would eventually be completed. However, this did not end up happening.</p>
+
+<h1>Technical</h1>
+
+<h2>My controller doesn't work, but it did on older versions.</h2>
+
+<p>Alpha 4.5 switched to using an XInput-compliant input system by default; additional configuration is needed to use unrecognized controllers in this mode. See <a href="/help/controllers">here</a> for more information on how to map your controller for use in XInput mode on StepMania OutFox.</p>
+
+<p><a href="https://projectmoon.dance/news/stepmania-53-alpha-48-released">As of Alpha 4.8.1</a>, we have introduced a HIDAPI-based "Legacy" input system as an option in the Experimental Settings menu. It is similar in behaviour to the input system seen in SM 5.0, but rewritten. If you are having difficulty getting a controller to work in XInput mode or if it performed better under the input handling of previous versions, we recommend that you try it on Legacy mode.</p>
+
+<h2>I have a recent/fast processor and my game is having a lot of problems, why is that?</h2>
+
+<p>Parts of the game are so well-optimised now that they're running <em>too fast</em>, and the rest of the game needs to catch up. We will have a proper fix later, but increasing the amount of background activity (i.e. having other programs running in the background, etc.) is a temporary solution.</p>
+
+<h2>Simply Love is not letting me use it on 5.3</h2>
+
+<p>Simply Love does work on 5.3, but since version 4.8, a compatibility warning has been shown by the theme if an unsupported version of SM is detected. On 4.8, you can press the Escape button twice to bypass the compatibility warning, but 4.9 blocks this workaround.</p>
+
+<p>The version check can be removed by opening Scripts/SL-SupportHelpers.lua in the theme, and changing the line&nbsp;</p>
+
+<p><code>if not (t[2] and (t[2]==0 or t[2]==1)) then return false end</code></p>
+
+<p>to</p>
+
+<p><code>if not (t[2] and (t[2]==0 or t[2]==1 or t[2]==3)) then return false end</code></p>
+
+<p>These issues were brought upon by misunderstandings with the theme's developer over our plans for 5.3 (including concerns over the aforementioned lack of public source repository). These concerns <a href="https://github.com/quietly-turning/Simply-Love-SM5/pull/184#issuecomment-717841953">were able to be resolved</a>, although official support for 5.3 will not be worked on until we transition to public source availability.</p>
+
+<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> has been created by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with 5.3</p>
+
+<h1>Linux</h1>
+
+<h2>I get the error "error while loading shared libraries: libOpenGL.so.0:" on Ubuntu 20.04-based distributions</h2>
+
+<p>Install the <code>libopengl0</code> package. (<code>sudo apt install ibopengl0</code>)</p>
+
+<h1>macOS</h1>
+
+<h2>I'm having issues launching the game.</h2>
+
+<p>If you receive errors such as "No noteskins found" or other unusual behavior, you will have to change macOS security settings in order for Project OutFox to operate correctly. The OS does not trust unsigned applications, and prevents access to external files unless given manual permission by the user.</p>
+
+<p>To do this, open Terminal and run the following command: <code>xattr -dr com.apple.quarantine /path/to/OutFox</code></p>
+
+<p>Alternatively, you can exclude the path, and drag the folder containing the game executable directly onto the window.</p>
+
+<p>On older builds, macOS Catalina also generated a message stating that the game was requesting permission to &nbsp;receive keystrokes from any application. This was a side effect of previous code that has since been removed.</p>
+
+<h2>The game is rendering small in the bottom corner of the window.</h2>
+
+<p>This is due to the renderer not supporting scaled screens yet. To fix this, right-click the game executable and select "Get info" (or highlight the file and press Command (⌘)+I, and toggle the "Open in Low Resolution" option under General.</p>

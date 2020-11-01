@@ -1,0 +1,548 @@
+<p>The following is the changelog of Project OutFox builds and milestones that were developed prior to our shift to public alpha builds in December 2019. Changelogs for builds released since then are available from the Downloads page.</p>
+
+<h2>5.3.0.a52 – June 29, 2019</h2>
+
+<ul>
+	<li>Added LuaJIT to test performance. <em>(Jousway)</em></li>
+	<li>Added CMD lexicon Parser to maintain support with prior SM versions. <em>(Jousway)</em></li>
+	<li>Fixed LibMad Time limit causing an overflow. <em>(Squirrel)</em></li>
+	<li>Fixed Crash with Disablemines. <em>(Mr.ThatKid)</em></li>
+	<li>Massive demacro throughout the codebase to modernise functions. <em>(Mr.ThatKid)</em></li>
+	<li>Some more chrono fixes. <em>(Rytak)</em></li>
+</ul>
+
+<h2>5.3.0.a51 – May 27, 2019</h2>
+
+<ul>
+	<li>Correct hold on noteskins. <em>(Lirodon)</em></li>
+	<li>Add Trig Modifiers. <em>(Mr.ThatKid)</em></li>
+	<li>Fix plethora of invalid casts, and fix alsa class. <em>(Jousway/Squirrel)</em></li>
+	<li>Fix Pump holds and noteskins. <em>(Lirodon)</em></li>
+	<li>Added Paw Noteskin for Pump. <em>(Lirodon)</em></li>
+	<li>Typedef to using swap for cpp 11. <em>(Rytak)</em></li>
+</ul>
+
+<h2>5.3.0.a47 – April 24, 2019</h2>
+
+<ul>
+	<li>Fixed mixed Texture allocation being dereferenced. <em>(RyTak/Squirrel)</em></li>
+	<li>Fixed some old C-Style casting errors causing stack overflows. <em>(RyTak)</em></li>
+	<li>Fixed dangling pointers in old->new handling of sprites. <em>(RyTak/Squirrel)</em></li>
+	<li>Tweaked several Rage handlers for better memory management. <em>(RyTak/Jousway)</em></li>
+</ul>
+
+<h2>5.3.0.🐉81 – April 24, 2019</h2>
+
+<ul>
+	<li>Tweak of GLEW/OpenGL to re-enable (Hardware Acceleration) support for pre-2011 Hardware. We will not be supporting anything with less than 128MB of VRAM. <em>(Squirrel)</em></li>
+	<li>Tweak to remove dependency on ancient colour handling that actually <em>slowed</em> the game down, instead of giving it the intended performance. <em>(Squirrel)</em></li>
+	<li>Re-purposed GL Entrypoints to re-support ancient GL<1.5 Hardware, for Native Arcade Hardware support. <em>(Squirrel)</em></li>
+	<li>Added oITG Lua handling tweaks for some items which were lost in the 4.0->5.x “modernisation”. <em>(Squirrel)</em></li>
+	<li>New Input Manager. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a44 – April 19, 2019</h2>
+
+<ul>
+	<li>Implemented SetNoteData. <em>(Mr.ThatKid)</em></li>
+	<li>Implemented SetNoteDataFromLua. <em>(Mr.ThatKid)</em></li>
+	<li>Have NotePath Draw under receptors. <em>(Mr.ThatKid)</em></li>
+	<li>Many deletetexture tweaks and fixes. <em>(RyTak/Jousway)</em></li>
+	<li>Early uPnP support for windows. <em>(RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a40 – April 4, 2019</h2>
+
+<ul>
+	<li>ALSA cast consignments fix. <em>(RyTak/Squirrel)</em></li>
+	<li>Uninit issues fixed. <em>(RyTak)</em></li>
+	<li>Fixed Advanced Judgements showing when not enabled. <em>(Jousway)</em></li>
+	<li>Fixed invalid ALSA cleanup. <em>(Squirrel)</em></li>
+	<li>Fixed invalid pointer clear in LUA. <em>(RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a38 (0007BugFix) – March 28, 2019</h2>
+
+<ul>
+	<li>Fixed bAccurate Math. <em>(RyTak)</em></li>
+	<li>Added Beat Based Hold Lengths. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed ExtendHolds and StraightHolds. <em>(Mr.ThatKid)</em></li>
+	<li>Added Lower Hz refresh rate support. <em>(RyTak)</em></li>
+	<li>Minor Chrono fixes to polling rates. <em>(RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a36 (0007BugFix) – March 21, 2019</h2>
+
+<ul>
+	<li>Fixed RageEvent polling. <em>(RyTak)</em></li>
+	<li>Calls to WheelBase preventing time stamps fixed. <em>(RyTak)</em></li>
+	<li>Chrono Fixes and Many other tweaks. <em>(RyTak)</em></li>
+	<li>Implemented HoldTinyX & UnboundedReverse Submodifiers. <em>(Mr.ThatKid)</em></li>
+	<li>Many Textureman Tweaks. <em>(Jousway)</em></li>
+	<li>Fixed Boomerang to depend on it’s own magnitude. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed Lua stack issues in preparation for future development. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed Hold body cap behaviour. <em>(Mr.ThatKid)</em></li>
+</ul>
+
+<h2>5.3.0.🐉69 – March 21h2. 5.3.0 Silver Alpha 4.4.1 – March 4th, 2020 2019</h2>
+
+<ul>
+	<li>Added New SDL2 XWindow support. <em>(Squirrel)</em></li>
+	<li>New m_prefs for chosen underlying GFX systems. <em>(Squirrel)</em></li>
+	<li>Added new sound pipe. <em>(Squirrel)</em></li>
+	<li>Re-based GPU entry points to support OG hardware and timing systems. <em>(Squirrel)</em></li>
+	<li>Fixed Sprite() handover. <em>(Squirrel)</em></li>
+	<li>Added a new heap stack to check for overflow/stack corruption. <em>(Squirrel)</em></li>
+	<li>Fixed computational math pipe. <em>(Squirrel)</em></li>
+	<li>Added new media decoder support. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a34 (0003/0004/0005/0006 BugFix) – March 12th 2019</h2>
+
+<ul>
+	<li>QoL bug squishing, update code to modern standards, many little typos. <em>(Squirrel)</em></li>
+	<li>Fix 255 colour mode for palette textures. <em>(Squirrel)</em></li>
+	<li>Fix GPU detection system for defaults. <em>(Squirrel)</em></li>
+	<li>Fix several iteration errors causing heap corruption. <em>(Squirrel)</em></li>
+	<li>Fixed FontPage overflow. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a33 (0003BugFix) – February 25-28th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed odd thread crash with a rarely called out of order variable. <em>(Squirrel)</em></li>
+	<li>Removed pointless ASSERT if a texture was already unloaded. <em>(Squirrel)</em></li>
+	<li>Fixed many uninitialized variables across the Rage* .h collection, mostly typos. <em>(Squirrel)</em></li>
+	<li>Fixed MusicWheel overflow, causing a crash on Mac/Linux when user has 509+ songs. <em>(Squirrel)</em></li>
+	<li>Adjusted Memory handling for the main game loop, to ensure image caching is effective once more. <em>(Squirrel)</em></li>
+	<li>Added new definitions in rage display to stop ancient prefs being picked. <em>(Squirrel)</em></li>
+	<li>Implemented FinishedCommand to sound. <em>(Jousway)</em></li>
+	<li>Multiple performance tweaks across the repo, mostly to do with typos and bad variable name choices. <em>(Squirrel)</em></li>
+	<li>Identified option for color blind mode. <em>(Squirrel)</em></li>
+	<li>Set version on shaders in prep for set GL core versioning. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.b09 – February 27th 2019</h2>
+
+<ul>
+	<li>Reduced logic check in ModSpline to improve performance. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed column check in ModSpline. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed AttenuateX behaviour to act as defined. <em>(Mr.ThatKid)</em></li>
+</ul>
+
+<h2>5.3.0.a30 (0003BugFix) – February 21-24th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed Missing Array management in JSON. <em>(Squirrel)</em></li>
+	<li>Fixed Overflow in zlib caused by new optimisations. <em>(Squirrel)</em></li>
+	<li>Fixed array overflows caused by new memory management code. <em>(Squirrel)</em></li>
+	<li>Fixed erroneous edge case crash with one memory address out of range in Linux. <em>(Squirrel)</em></li>
+	<li>Fixed bad memory handlers in Wheel and Note-field. <em>(Squirrel)</em></li>
+	<li>Fixed case checks causing odd stack heap corruption. <em>(Squirrel)</em></li>
+	<li>Removed bad calls in /arch to support new clear functions to lessen memory load. <em>(Squirrel)</em></li>
+	<li>Ensure free() calls were implemented correctly in gameplay and song select. <em>(Squirrel)</em></li>
+	<li>Massive iterator check over the /src folder to ensure none were lost. <em>(Squirrel)</em></li>
+	<li>Fix array destruction causing edge-case crashes on Linux. <em>(Squirrel)</em></li>
+	<li>Fix variable pointer destruction to prevent windows crash on leaving note-field. <em>(Squirrel)</em></li>
+	<li>Fixed Deprecated cmp call to remove warn-deprecated in compilation. <em>(Squirrel/RyTak)</em></li>
+	<li>Added Mod constructor to fix Column-Specific NotePaths. <em>(Mr.ThatKid)</em></li>
+	<li>Fixed typos in LLW X11. <em>(RyTak)</em></li>
+	<li>Fixed Iterator bugs in RageFile* cpp files. <em>(Squirrel)</em></li>
+	<li>Fixed missing mapping in Screen* cpp files. <em>(Squirrel)</em></li>
+	<li>Fixed RunItTwice in Textbanner. <em>(RyTak)</em></li>
+	<li>Fixed overflow in array bounds in Sprite Manager. <em>(Squirrel)</em></li>
+	<li>Fixed out of order declarations in Gameplay. Fixes a rare crash and closes several bugs. <em>(Squirrel)</em></li>
+	<li>Fixed bug with dangling pointer access violation in Notefield due to an old oversight. <em>(Squirrel)</em></li>
+	<li>Fixed a Lua edge-case un-reference error causing a corrupted stack. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a25(Blackflagged) – February 18th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed RageFile errors with corrupt headers. <em>(Squirrel)</em></li>
+	<li>Fixed Lua pointers being delinked causing mods and actors to not play correctly. <em>(Squirrel)</em></li>
+	<li>Fixed more variable memory management. <em>(Squirrel)</em></li>
+	<li>A regression was caused in the heap stack, build blackflagged to find out what caused it. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a24 – February 18th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed missing variable declarations. <em>(Squirrel)</em></li>
+	<li>Re-enabled several missing pointers in the lua system. <em>(Squirrel)</em></li>
+	<li>Fixed array management from lost changed in the past. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a23 – February 15th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Discovered flaw in timing method needing modernising before beta push. <em>(Squirrel)</em></li>
+	<li>Modernised memory management in regards to allocation. <em>(Squirrel)</em></li>
+	<li>Removed Reassignment after delete options for variables that did not require it. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a22 – February 14th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed Array Allocation being missed in destruction calls. <em>(Squirrel)</em></li>
+	<li>More Pointer Fixes. <em>(Squirrel)</em></li>
+	<li>Removed archaic delete handling. <em>(Squirrel)</em></li>
+	<li>Fixed memory overflow in RageThreads. <em>(Squirrel)</em></li>
+	<li>Fixed multiple issues in Json handling. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a21 – February 13th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed Chrono Calls in InputDevice. <em>(RyTak)</em></li>
+	<li>Overhauled bug in Rage’s memory handler to no longer leave memory holes. <em>(Squirrel)</em></li>
+	<li>Fixed bad CString calls in FontManager <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a20 – February 11th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fixed Missing declarations. <em>(Squirrel)</em></li>
+	<li>Edited missing loop calls. <em>(Squirrel)</em></li>
+	<li>Re-added missing iterators lost to the sands of time. <em>(Squirrel)</em></li>
+	<li>Ensured nullptr assignments were needed within Rage, several were not. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a15 – 5.3.0.a19 – February 10th 2019 <em>(BRONZE)</em> Engine Pull-up Branch</h2>
+
+<ul>
+	<li>Fix Dangling Pointers in RageSound. <em>(Squirrel)</em></li>
+	<li>Fix Dangling Pointers in Screen Management. <em>(Squirrel)</em></li>
+	<li>Fix Overflows in Song management. <em>(Squirrel)</em></li>
+	<li>RageSurface memory management tweaks. <em>(Squirrel)</em></li>
+	<li>MovieTexture Reference repairing. <em>(Squirrel)</em></li>
+	<li>Variable Name cleanup and redundancy removal. <em>(Squirrel)</em></li>
+	<li>RageDriver tweaks to prevent crash on new bug found from Variable tweaks. <em>(Squirrel)</em></li>
+	<li>Order of execution error in driver manager fixed. <em>(Squirrel/RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.b08 – February 9th 2019</h2>
+
+<ul>
+	<li>New Memory use display on debugoverlay. <em>(RyTak/Mr.ThatKid)</em></li>
+	<li>Fix Linux compilation problems with new math and modifiers. <em>(Mr.ThatKid)</em></li>
+	<li>New Mod/adjustment for players with FarDistZ. <em>(Mr.ThatKid)</em></li>
+</ul>
+
+<h2>5.3.0.b07 – February 9th 2019</h2>
+
+<ul>
+	<li>New Mods: WireFrame, StraightHolds and Gradient Bugfix. <em>(Mr.ThatKid)</em></li>
+	<li>Readied Codebase for Bronze branch testing. This will allow us to focus on the release! <em>(RyTak/Mr.ThatKid)</em></li>
+	<li>Fixed Array allocations within Rage to prevent an edge case overflow/crash with mods enabled <em>(Squirrel)</em></li>
+	<li>More Dangling Pointer fixes.</li>
+</ul>
+
+<h2>5.3.0.b06 – February 5th 2019</h2>
+
+<ul>
+	<li>Fix Dangling Pointers in timing system <em>(Squirrel)</em></li>
+	<li>Fix HID Errors. <em>(RyTak)</em></li>
+	<li>New Mods: Gradient for NotePath, HideNoteFlash/HideHoldJudgements and Spiral <em>(Mr.ThatKid)</em></li>
+</ul>
+
+<h2>5.3.0.b05 – February 1st 2019</h2>
+
+<ul>
+	<li>Fix Ragetimer calls. <em>(Squirrel/RyTak)</em></li>
+	<li>Fix PCH Errors. <em>(RyTak)</em></li>
+	<li>New JIT testing code – using new cmath methods. <em>(Jousway)</em></li>
+</ul>
+
+<h2>5.3.0.🐉43 – January 31st 2019</h2>
+
+<p><strong>Squirrel’s Experimental branch added to changelog. This branch is considered experimental, and will have code added which will move into the Alpha/Beta branch after extreme testing.</strong></p>
+
+<ul>
+	<li>SFML handles added for first time. <em>(Squirrel)</em></li>
+	<li>LLW (for RageLegacy) removed. <em>(Squirrel)</em></li>
+	<li>SDL2 properties added, not implemented in code just yet. <em>(Squirrel)</em></li>
+	<li>Shader programs loaded in a new folder called ‘shaders’. Accessible to modders and main engine for new effects and textures. <em>(Squirrel)</em></li>
+	<li>RageDisplay_GLES deprecated and will be removed in favour of new engine updates. <em>(Squirrel)</em></li>
+	<li>New sound options added, to support other formats and loading methods. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.b04 – January 27th 2019</h2>
+
+<ul>
+	<li>Fixing Mac OS Compile Errors (10.12/10.13) <em>(RyTak)</em></li>
+	<li>lib updates – libogg/libvorbis <em>(RyTak)</em></li>
+	<li>Judgement fixes <em>(Lirodon)</em></li>
+</ul>
+
+<h2>5.3.0.b03 – January 24th 2019</h2>
+
+<ul>
+	<li>Fixed Fitness Goal Y positioning with the new evaluation positioning. <em>(Jose)</em></li>
+	<li>Moved new fonts from “Default” to “default”. <em>(Jose)</em></li>
+	<li>Implemented floor reflections for characters. (feedback needed) <em>(Jose)</em></li>
+	<li>Added support of Rate in case of Edit Mode usage. <em>(Jose)</em></li>
+	<li>Remade implementation of Cameras. <em>(Jose)</em></li>
+	<li>Automated NumCameras per stage. <em>(Jose)</em></li>
+	<li>Updated DCD documentation for the new usage methods. <em>(Jose)</em></li>
+	<li>Replaced Check[Boolean/Number]OnLocationSetting with more reasonable Config.Load commands. <em>(Jose)</em></li>
+	<li>Readded MusicRate to the Model RateUpdater. <em>(Jose)</em></li>
+</ul>
+
+<h2>5.3.0.b02 – January 17th 2019</h2>
+
+<ul>
+	<li>Soundwaves refresh updates <em>(Lirodon)</em></li>
+	<li>Timing.lua edited to remove AddSeconds Function. <em>(RyTak)</em></li>
+	<li>Pro handling in noteskin fixes. <em>(Lirodon)</em></li>
+	<li>Fallback noteskin handing fixes. <em>(Lirodon)</em></li>
+	<li>Lua Trash/Garbage Collection fixes. <em>(Lirodon)</em></li>
+	<li>Fixed type casting. <em>(RyTak)</em></li>
+	<li>Fixed AutoPlay behavior with Pro Judgements. Now, AutoPlay & AutoPlayCPU will have their judgements clamped to not exceed the current highest enabled judgement in the current timing set. <em>(Mr.ThatKid)</em></li>
+</ul>
+
+<p>For example, if W1 is the highest enabled judgement, AutoPlay will give out W1 judgements. If Pro_W5 is the highest enabled, AutoPlay gives out Pro_W5 instead. AutoPlayCPU is similarly clamped in regards to the judgements it can
+	<br>give out. The TimingWindow enum was slightly rearranged to aid in this. The window determination for AutoPlay was also changed to properly use the higher judgements.</p>
+
+<h2>5.3.0.b01 – January 16th 2019</h2>
+
+<ul>
+	<li>Changes to Soundwaves and DCD. <em>(Jose)</em></li>
+	<li>Increase speed limit of dancers. ( 1.5x rate at 300 to 3x time at 700 ) <em>(Jose)</em></li>
+	<li>Remove clamp from the ModelRate function because honestly it was unnecessary. <em>(Jose)</em></li>
+	<li>Added transparent GraphDisplay for the Scatterplot. <em>(Jose)</em></li>
+	<li>Fixed Max Combo label on Gameplay StatsDisplay. <em>(Jose)</em></li>
+	<li>Added Stepcircle Graphic for BeginnerHelper and fixed positioning of DancePad to accommodate DDRPC pads. <em>(Jose)</em></li>
+	<li>Cleaned up some prints. <em>(Jose)</em></li>
+</ul>
+
+<h2>5.3.0.b00 – January 13th 2019</h2>
+
+<p><strong>Began Code Evaluation for Release candidate for first beta</strong></p>
+
+<p>The engine code from the previous builds will be used to cherry pick and create the branch for the public builds.</p>
+
+<h2>5.3.0.a14 – January 13th 2019</h2>
+
+<ul>
+	<li>Researched 64-bit implementation <em>(RyTak/Squirrel)</em></li>
+	<li>Fixed crash handler arch win32 invalid use of i386 asm. <em>(RyTak)</em></li>
+	<li>Created Chart Stats, using AMV’s, adapted them for 16:9/4:3 use <em>(Jose)</em></li>
+	<li>Added icon display of step-type behind the difficulty name <em>(Jose)</em></li>
+	<li>Created 2 stages for the Dedicated Character Display (Skybox & Soundwaves), meant to demonstrate DCD with it’s stage support. <em>(Jose)</em></li>
+	<li>Fixed context handling for windows 64 bit operations <em>(RyTak)</em></li>
+	<li>Fixed default mixed case in folder names causing assert failures. <em>(RyTak/Lirodon/Mr.ThatKid)</em></li>
+	<li>Exposed polygonmode & polygonlinewidth to Actors. (Wireframe Mode) <em>(Mr. ThatKid)</em></li>
+	<li>Fix for deleted stages to prevent check for unreferenced stages. <em>(Jose)</em></li>
+	<li>Optimised theme functions with newer more modern methods. <em>(Jose)</em></li>
+	<li>Researched SDL2 implementation for Raspberry Pi 2 and upwards <em>(Squirrel)</em></li>
+	<li>Began Serene OGL testing for GL3+ <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a13 – January 4th 2019</h2>
+
+<ul>
+	<li>Dedicated Character Display has been re-implemented and has had many fixes added <em>(Jose)</em></li>
+	<li>Beginner Helper implemented via LUA. <em>(Jose)</em></li>
+	<li>Fixed error preventing GLES returning null on linux. <em>(RyTak)</em></li>
+	<li>Implemented Rage Color Modifiers <em>(Mr. ThatKid)</em></li>
+	<li>Fixed deltatime() conversions causing overflow on mods <em>(RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a12 – 31 December 2018</h2>
+
+<ul>
+	<li>Fixed more memory leaks in texture generation. <em>(Squirrel/RyTak)</em></li>
+	<li>Fixed Access Exception errors on AFTs. <em>(RyTak)</em></li>
+	<li>Edited CMake to properly understand the modern libraries OutFox uses now. <em>(RyTak)</em></li>
+	<li>Fixed Variable De-Refence in font manager. <em>(RyTak/Squirrel)</em></li>
+	<li>Removed generation of multiple stack() variables to fix linux memory management. <em>(RyTak)</em></li>
+	<li>Fixed a whole host of typos in the engine. <em>(RyTak/Squirrel)</em></li>
+	<li>Fixed De-reference points in many functions. <em>(RyTak/Squirrel)</em></li>
+	<li>Fixed TextureLeak method. <em>(Squirrel/RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a11 – 27 December 2018</h2>
+
+<ul>
+	<li>Fixed massive memory leak in texture generation. <em>(Squirrel/RyTak)</em></li>
+	<li>Removed DDR era texture functions which have enabled a 4x speedup on OpenGL. <em>(Squirrel)</em></li>
+	<li>Fixed and streamlined many aspects of RageMath/RageMatrix, prior to its deprecation and removal. <em>(RyTak/Squirrel)</em></li>
+	<li>Modified several loading methods to stop junk data overloading in pointers. <em>(RyTak)</em></li>
+	<li>Added new GFX window preparations prior to LLW deprecation and removal. <em>(RyTak/Squirrel)</em></li>
+	<li>Added new preference options prior to deprecation of the FF pipeline in OpenGL <em>(Squirrel/RyTak)</em></li>
+	<li>Fixed Math overflows in AFTs. <em>(RyTak/Mr. ThatKid)</em></li>
+	<li>Fixed out-of-order execution on several functions to reduce memory use and give us a performance increase in windows. <em>(RyTak/Squirrel)</em></li>
+	<li>Tweaking of media loading in preparation for the older loaders deprecation and removal. <em>(RyTak/Jousway/Squirrel)</em></li>
+	<li>Added new fixes for modifiers in preparation for new options for ITG style mods <em>(Mr. ThatKid)</em></li>
+	<li>Linux regression on overflow due to RagePAL textures removed and fixed. <em>(Squirrel/RyTak)</em></li>
+	<li>Fixed bug in DDR code that isn’t being used to do anything, but was still being called 100+ times a frame. <em>(Squirrel/RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a10 – 19 December 2018</h2>
+
+<ul>
+	<li>Implemented Hold orientation by travel. <em>(Mr. ThatKid)</em></li>
+	<li>Removed Lambda theme. <em>(Lirodon)</em></li>
+	<li>Introduced new ‘Soundwaves’ Theme, to reflect the new modernisation and stylistic changes to the game. The new theme is much lighter and includes the OutFox branding. <em>(Lirodon)</em></li>
+	<li>SIGSEGV Fixed on overflow will now continue if noteskin isn’t present. <em>(RyTak/Lirodon)</em></li>
+	<li>Added Wide and Double support for SMX. <em>(Lirodon)</em></li>
+	<li>Increased TextureUnit enum size from 4 to more modern equivalents. <em>(Squirrel/RyTak)</em></li>
+	<li>Increase Log File Size Limit to 2MB <em>(RyTak/Squirrel)</em></li>
+	<li>Allow LoadBones to stack animations. (This will allow playanimation to properly load the animation without hitting the machine, as the previous method interrupted the playback of the current animation to overwrite.) <em>(Jose)</em></li>
+	<li>Added more controls for column-specific Bumpy & its’ variants. <em>(Mr. ThatKid)</em></li>
+	<li>Changed buffer time for deleting cached textures. <em>(RyTak/Squirrel)</em></li>
+	<li>Modern FFMPEG Testing and evaluation. <em>(Jousway)</em></li>
+	<li>LibMAD alternative research and development <em>(Jousway)</em></li>
+	<li>MP3 implementation research and development <em>(Jousway/Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a09 – 13 December 2018</h2>
+
+<ul>
+	<li>Fix screenshots by adding RGB2BGR. <em>(Jousway)</em></li>
+	<li>Added new levels on screenshots, and fixed an overflow due to odd dimensions. <em>(Jousway)</em></li>
+	<li>Implemented HoldGrainMult modifier. <em>(Mr. ThatKid)</em></li>
+	<li>libogg updated. <em>(RyTak)</em></li>
+	<li>libvorbis updated. <em>(RyTak)</em></li>
+	<li>zlib updated. <em>(RyTak)</em></li>
+	<li>tommath updated. <em>(RyTak)</em></li>
+	<li>tomcrypt updated. <em>(RyTak)</em></li>
+	<li>libprce updated. <em>(RyTak)</em></li>
+	<li>Fixed hold behavior for when Tipsy gets activated. <em>(Mr. ThatKid)</em></li>
+	<li>Fixed FFMPEG memory leaks, no more buffer overflow in rare cases. <em>(RyTak/Jousway/Squirrel)</em></li>
+	<li>ScreenGameplay no longer memory leaks on arrow generation. <em>(RyTak)</em></li>
+	<li>Implemented ExtendHolds modifier. <em>(Mr. ThatKid)</em></li>
+	<li>Massive fix spree of Memory Leaks in texture and asset management. <em>(RyTak/Squirrel)</em></li>
+	<li>Reloading themes no longer causes RAM use to drastically increase, now only results in ~2MB increase per refresh. <em>(RyTak)</em></li>
+	<li>OGL tweaks to improve frame response. <em>(Squirrel/RyTak)</em></li>
+	<li>Pipeline modified to allow for higher GPU load! <em>(Squirrel)</em></li>
+	<li>ActorFrameTextures Reworked. <em>(RyTak)</em></li>
+</ul>
+
+<h2>5.3.0.a08 – 1 December 2018</h2>
+
+<ul>
+	<li>Removal of on iterators within the fixed pipeline parts of the engine to fix memory leaking during play. <em>(Squirrel)</em></li>
+	<li>Modernising of Rage Asset management prior to Rage being deprecated and removed. <em>(Squirrel)</em></li>
+	<li>Clang misc-* across code base. No more C++98 in weird places anymore. <em>(Squirrel)</em></li>
+	<li>Preliminary SMX 5 Panel support. <em>(Lirodon)</em></li>
+	<li>SM5 Noteskins folder moved to Appearance folder. <em>(Jousway)</em></li>
+	<li>Native Theme/NoteSkin support moved to the Appearance folder. <em>(Jousway)</em></li>
+	<li>Toasties / Media added to Appearance folder. <em>(Jousway)</em></li>
+	<li>Added original folder location support to keep backwards compatibility. <em>(Jousway)</em></li>
+	<li>Fix hold judgment behavior with move column mods <em>(Mr. ThatKid)</em></li>
+	<li>Allow for variable FarDistZ limits. <em>(Mr. ThatKid)</em></li>
+	<li>Now you can set a draw distance for your ActorFrame! <em>(Mr. ThatKid)</em></li>
+	<li>Implemented NoteSkew. <em>(Mr. ThatKid)</em></li>
+	<li>LuaJIT Testing <em>(Jousway)</em></li>
+</ul>
+
+<h2>5.3.0.a07 – 27 November 2018</h2>
+
+<p>The Code Freeze ended on the 27th of November to allow more work to be done on modernising the code.</p>
+
+<ul>
+	<li>Code Freeze: QA Round 2.</li>
+	<li>Fixed GL3 initialisation on X. <em>(Squirrel)</em></li>
+	<li>Fixed overflow on X window systems with more than one monitor. <em>(Squirrel)</em></li>
+	<li>Fixed overflow on LLW due to pointer de-references. <em>(Squirrel)</em></li>
+	<li>Optimised Mod implementations in the engine. <em>(Mr. ThatKid)</em></li>
+	<li>Fixed incorrect ceilf() settings in functions. <em>(Squirrel)</em></li>
+	<li>Fixed regression due to bad code in RageTimer. <em>(Squirrel)</em></li>
+	<li>Allowed for new Preferences to be added, and added new screens for this support. <em>(Squirrel/Jousway)</em></li>
+	<li>Added new Graphics levels, in preparation for Rage deprecation and removal. <em>(Squirrel)</em></li>
+</ul>
+
+<h2>5.3.0.a06 – 20 October 2018</h2>
+
+<p>There was a code freeze implemented on 1st October 2018 to re-base and quality assure work done since August 14th 2018. Squirrel wished to ensure no regressions were added to the code, and several bug fixes were discovered in this time.</p>
+
+<ul>
+	<li>Code Freeze: QA Round 1.</li>
+	<li>Fixed unnecessary float->int conversion in animations as we do not need to worry about floating point co-ordinates anymore. <em>(Jousway/Squirrel)</em></li>
+	<li>Fixed overflow caused by STBI, as Rage was still expecting archaic formats to be delivered to RageTextureManager, this has now been modernised. <em>(Squirrel/Jousway)</em></li>
+	<li>Fixed rare Ogg Vorbis overflow introduced by increasing accuracy of timer. <em>(Squirrel)</em></li>
+	<li>Fixed rare crash in D3D due to some integrated GPU’s not having RGB888/RGB444 support, and RageSurface not providing an accurate pixel format. <em>(Squirrel)</em></li>
+	<li>Fixed OpenGL versioning not correctly reading MacOS’s implementation of GL Core Profile <em>(Squirrel)</em></li>
+	<li>Modified OpenGL’s calling and texture allocation. <em>(Squirrel/imakris)</em></li>
+	<li>Fixed MipMapping level and texture allocation, this now effectively gives us more linear control over how the screen is drawn in OGL. <em>(Squirrel/imakris)</em></li>
+	<li>Fixed unnecessary call to modules that don’t exist. <em>(Squirrel/Jousway)</em></li>
+	<li>Added more functions to GLATTER which allow for 4.x OpenGL init calls. <em>(imakris)</em></li>
+	<li>Fixed regression in RageTextureManager that wanted GLUBuild2DMipMaps() specifically hardcoded for a backup that didn’t exist. This removed an odd state in the machine and stopped weird ‘skips’ on the screen on X windows. It had the benefit of enabling MacOS to enjoy 3.3 Core mode for the first time. <em>(Squirrel)</em></li>
+	<li>Fixed many broken pointers and de-referencing of variables. <em>(Squirrel/Jousway)</em></li>
+</ul>
+
+<h2>5.3.0.a05 – 28 September 2018</h2>
+
+<ul>
+	<li>Removed VBO Restriction. <em>(Squirrel/Jousway)</em></li>
+	<li>Fixed Texture Format Allocation. <em>(Squirrel/Jousway)</em></li>
+	<li>Fixed build compilation for Win32 D3D. <em>(Jousway)</em></li>
+	<li>Replaced old image calls with STBI. <em>(Jousway)</em></li>
+	<li>Implemented CenteredPath. <em>(Mr. ThatKid)</em></li>
+</ul>
+
+<h2>5.3.0.a04 -16 September 2018</h2>
+
+<ul>
+	<li>Optimized bundled themes and NoteSkins. <em>(Lirodon/Jousway)</em></li>
+	<li>Adjusted use of the obsolete Lua custom command reader (“cmd”) to improve performance. <em>(Lirodon/Jousway)</em>
+
+		<ul>
+			<li>This is intended as future-proofing for other upcoming changes.</li>
+		</ul>
+	</li>
+	<li>Use of file-based redirection (.redir) in themes are to be considered deprecated, and this practice is being removed from 5.3 default themes and NoteSkins to improve performance. They will remain within the engine to maintain backwards compatibility with existing and previous content. <em>(Lirodon)</em></li>
+	<li>Fixed ScreenInit Animations. <em>(Jose/Jousway)</em></li>
+	<li>Fixed Transitions for NextScreen. <em>(Jose/Lirodon/Jousway)</em></li>
+	<li>Fixed Quad Bordering on ScreenInit. <em>(Jose/Lirodon/Jousway)</em></li>
+	<li>Added new Tiny animation mod. <em>(Mr. ThatKid)</em></li>
+	<li>Fixed compilation on macOS 10.13 “High Sierra”. <em>(Jose)</em></li>
+</ul>
+
+<h2>5.3.0.a03 – 11 September 2018</h2>
+
+<ul>
+	<li>Fixed input ghosting issue in X11 <em>(geefr)</em></li>
+	<li>Fixed style consistency. <em>(Lirodon)</em></li>
+	<li>Modded Fragment/Vertex Shader Compilations so they now work. <em>(Squirrel)</em></li>
+	<li>NEW OpenGL Loader – Added glatter for OpenGL (Win/Linux) – massive increase in performance!! <em>(Squirrel/imakris)</em></li>
+	<li>Added new GLU methodology, together with GLATTER, means mipmapping now works. <em>(Squirrel/imakris)</em></li>
+	<li>Fixed WGL function support. <em>(Squirrel/Jousway)</em></li>
+	<li>Removed Texture Font Generator, as it’s not needed at all. <em>(Squirrel/Jousway)</em></li>
+	<li>Added Lua function to load bones to a 3D model without having to reload the screen. <em>(Jose)</em></li>
+</ul>
+
+<h2>5.3.0.a02 – 4 September 2018</h2>
+
+<ul>
+	<li>New Noteskins – Paw/Paws, and modified some of the methodology for them <em>(Lirodon)</em></li>
+	<li>Added New Judgement System <em>(Jousway)</em></li>
+	<li>Added CLANG-modernise across the code to remove archiac practice. <em>(Squirrel)</em></li>
+	<li>Fixed CDTitle Layering <em>(Jousway/Lirodon)</em></li>
+	<li>Updated and modernised the Installer on windows. <em>(Jousway)</em></li>
+	<li>Updated and fixed GLEW memory leaking on windows. <em>(Squirrel/Jousway)</em></li>
+	<li>Raspberry Pi 3B/B+ compiler support (SpottyMatt)</li>
+</ul>
+
+<h2>5.3.0.a01 – 29 August 2018</h2>
+
+<ul>
+	<li>Fixed issue with Alsa polling in linux. <em>(Flameshadowxeroshin)</em></li>
+	<li>Removes the unnecessary %s from all language files <em>(Fighter19)</em></li>
+	<li>Added new Toasty and Appearance options. <em>(Jousway)</em></li>
+	<li>Added new judgements. <em>(Jousway)</em></li>
+	<li>Added new version of GLEW. <em>(Jousway/Squirrel)</em></li>
+	<li>Added new GLEW 3.0+ hooks <em>(Squirrel)</em></li>
+	<li>Fixed GLEW seek pointers. <em>(Squirrel/imakris)</em></li>
+	<li>Added Outfox branding and modified Lambda theme. <em>(Lirodon)</em></li>
+	<li>Added new Arcade options to prevent exiting of game <em>(Jousway)</em></li>
+	<li>Removed libPNG and libJPG <em>(Jousway)</em></li>
+	<li>Added new image loader STB_Image <em>(Jousway)</em></li>
+	<li>Removed Palettes as they are 13 years out of date. <em>(Squirrel/Jousway)</em></li>
+</ul>
+
+<h2>5.3.0.a00 – 2 July 2018</h2>
+
+<p>This was our initial snapshot version. We pushed several new features to this version from our build of 5.0.x we began to work on. We refactored many pointers into streamlined areas and added GL3 to the engine, along with a new mode to enable modern practices. We consider this the beginning of the 5.3 branch, as by this point we had already changed much behind the scenes.</p>
