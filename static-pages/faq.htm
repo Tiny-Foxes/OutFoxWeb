@@ -97,12 +97,20 @@
 
 <p>If you receive errors such as "No noteskins found" or other unusual behavior, you will have to change macOS security settings in order for Project OutFox to operate correctly. The OS does not trust unsigned applications, and prevents access to external files unless given manual permission by the user.</p>
 
-<p>To do this, open Terminal and run the following command: <code>xattr -dr com.apple.quarantine /path/to/OutFox</code></p>
-
-<p>Alternatively, you can exclude the path, and drag the folder containing the game executable directly onto the window.</p>
+<p>To do this, open Terminal and run the following command: <code>xattr -dr com.apple.quarantine /path/to/StepMania</code>, replacing <code>/path/to/StepMania&nbsp;</code>with the path to the directory containing the StepMania executable (manually typing it out, or dragging the folder containing the game executable directly onto the window to fill it automatically).</p>
 
 <p>On older builds, macOS Catalina also generated a message stating that the game was requesting permission to &nbsp;receive keystrokes from any application. This was a side effect of previous code that has since been removed.</p>
 
 <h2>The game is rendering small in the bottom corner of the window.</h2>
 
 <p>This is due to the renderer not supporting scaled screens yet. To fix this, right-click the game executable and select "Get info" (or highlight the file and press Command (⌘)+I, and toggle the "Open in Low Resolution" option under General.</p>
+
+<h1>Windows</h1>
+
+<h2>I have ancient Intel graphics and the game does nothing but crash</h2>
+
+<p>If your log (Installation directory/Logs) shows <code>WDDM1.0</code> or <code>WDDM1.1</code> at the end of the graphics card name:</p><pre><code>00:00.505: Last seen video driver: Intel(R) 82945G Express Chipset Family (Microsoft Corporation - WDDM 1.0)</code></pre>
+
+<p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. StepMania 5.3 will not work on these drivers, as we do not support DirectX anymore (the old D3D renderer that 5.0.12/5.1 has) There is a list of drivers at this site location which may help, but for some of these cards, you need to keep your Windows 7 install disc handy!</p>
+
+<p>&nbsp;<a href="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html" rel="noreferrer noopener" tabindex="0" target="_blank" title="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html">https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html</a></p>
