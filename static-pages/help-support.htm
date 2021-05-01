@@ -54,3 +54,27 @@
 <p>This hasn’t quite happened to me (I tried with the PS3 DDR mat) but there are 2 types of controllers, a “Hat” type and not. So let’s say for example you hook up a pad/controller and the Dpad you configured up down left and right but “Config Key/Joy Mappings” only allows you to push one of them and the rest don’t work.</p>
 
 <p>Try configuring the directions to the analog stick instead and then mapping them again. I don’t think you should have to but it works, I’ve tested this with my PS4 Controller and in fact you can play with analog input.</p>
+
+<h2>XInput interfering with HIDAPI mode, and breaking axis pads</h2>
+
+<p>If you have an axis pad which is showing two sets of buttons, or simply just cancelling out, and you cannot seem to map it in game, this is what you need to do to fix it. The pad showing two buttons will look like this:</p>
+
+<p><img src="https://user-images.githubusercontent.com/11047768/103447952-575f6700-4c8a-11eb-9c48-c7c72a3d969a.png" class="img-fluid mx-auto d-block fr-fic fr-dii"></p>
+
+<p>I am pressing the left Arrow, but getting two sets of inputs. On Linux and MacOS, this can be due to an installed xbox360 driver, or the xpad module intercepting the events, and reporting an axis anyway. The next patch of OutFox mitigates this issue a little bit, but it still is a pain.</p>
+
+<p>To fix this, you need to write down the BUTTON numbers shown on screen, so you get a list for all four arrows:</p>
+
+<p>
+	<br>
+</p><pre>Down=Joy1_Button 2<br>Left=Joy1_Button 1<br>Right=Joy1_Button 4<br>Up=Joy1_Button 3</pre>
+
+<p>
+	<br>
+</p>
+
+<p>Make sure that you close the game. You can now navigate to your save folder, and look for your keymaps.ini file and set the buttons manually, so you can basically ignore the axis values given by the xpad driver. you need to add the mapping before the ::: as shown below:</p>
+
+<p><img src="https://user-images.githubusercontent.com/11047768/103448007-2f243800-4c8b-11eb-95ca-a6a1d47a0802.png" class="img-fluid mx-auto d-block fr-fic fr-dii"></p>
+
+<p>You can save this, and then start the game again, and your pad will be mapped.</p>
