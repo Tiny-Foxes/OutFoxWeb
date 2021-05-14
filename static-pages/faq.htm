@@ -1,20 +1,20 @@
 <h1>General</h1>
 
-<h2>What is StepMania 5.3?</h2>
+<h2>What is Project OutFox?</h2>
 
 <p>A project to modernize the 5.0.x/5.1 codebase to improve its performance and provide enhanced support for modern hardware and operating systems. We are also adding new features, including those being requested by our community, as well as refurbishing its support of non-dance/4-key game types, adding new game types, and so forth.</p>
 
 <h2>What is Project Moondance?</h2>
 
-<p>It is a community/umbrella for Team Rizu (the 5.3 dev team), covering 5.3/Project OutFox as well as other related projects.</p>
+<p>It is a community/umbrella for Team Rizu (the Project OutFox dev team), covering Project OutFox as well as other related projects.</p>
 
 <h2>Will it still work with my old songs/themes/etc.?</h2>
 
-<p>5.3 builds upon the existing 5.0.12/5.1 beta codebase, and maintaining backwards compatibility with older content is one of our main priorities (in fact, this is one of the reasons why the version number is 5.3 rather than skipping to a higher number like 6.0). Content that worked on 5.0.12/5.1 (including songs, themes, and noteskins) should still work on 5.3. If you experience any issues/weirdness, please report it to us.</p>
+<p>Project OutFox builds upon the existing 5.0.12/5.1 beta codebase, and maintaining backwards compatibility with older content is one of our main priorities (in fact, this is one of the reasons why the internal version number is 5.3 rather than skipping to a higher number like 6.0). Content that worked on 5.0.12/5.1 (including songs, themes, and noteskins) should still work on OutFox. If you experience any issues/weirdness, please report it to us.</p>
 
 <h3>Side note for developers</h3>
 
-<p>Please note that we are deprecating the use of semicolon-separated <code>cmd()</code> blocks (i.e. &nbsp;<code>OnCommand=cmd(linear,1.5;diffusealpha,1);&nbsp;</code>) as a means of placing commands on actors in Lua scripts, as this method is a non-standard Lua function that was created for StepMania, and 5.3 is not optimized with this coding style in mind (themes may experience performance penalties if they use this method). It is strongly recommended that function chaining (i.e. code such as <code>OnCommand=function(self) self:linear(1.5):diffusealpha(1) end,&nbsp;</code>) be used instead.</p>
+<p>Please note that we are deprecating the use of semicolon-separated <code>cmd()</code> blocks (i.e. &nbsp;<code>OnCommand=cmd(linear,1.5;diffusealpha,1);&nbsp;</code>) as a means of placing commands on actors in Lua scripts, as this method is a non-standard Lua function that was created for StepMania, and OutFox is not optimized with this coding style in mind (themes may experience performance penalties if they use this method). It is strongly recommended that function chaining (i.e. code such as <code>OnCommand=function(self) self:linear(1.5):diffusealpha(1) end,&nbsp;</code>) be used instead.</p>
 
 <h2>Can I install it alongside existing versions?</h2>
 
@@ -26,13 +26,13 @@
 
 <p>The existing SMO functionality is deprecated, but we have future plans to develop a revamped online system.</p>
 
-<h2>Where is the source code?/Why are you not open source?</h2>
+<h2>Where is the source code? Why are you not open source?</h2>
 
-<p>Right now we are not maintaining a public code repository, but we will open one in the future (with plans for it to succeed 5.1 as the mainline branch in the StepMania repository). As 5.3 is developing at a rapid pace, allowing source code access at this time would allow users to compile their own builds based on incomplete work, which would be difficult for us to debug and support during this phase of development..</p>
+<p>Right now we are not maintaining a public code repository, but we will open one in the future. As Project OutFox is developing at a rapid pace, allowing source code access at this time would allow users to compile their own builds based on incomplete work, which would be difficult for us to debug and support during this phase of development..</p>
 
 <p>Our code will be licensed under the Apache License 2.0, an open source license used by a variety of major projects (including Android) that provides stronger protections for our rights to be attributed for our work (particularly within forks), while maintaining the ability for StepMania to remain free and open source as it has always been.&nbsp;</p>
 
-<p><span style="background-color: transparent;">If you have any questions related to the 5.3 code&nbsp;</span><em style="background-color: transparent;">itself</em><span style="background-color: transparent;">, feel free to ask one of the development team members on our Discord server, and we'll be happy to discuss.</span></p>
+<p><span style="background-color: transparent;">If you have any questions related to the Project OutFox code&nbsp;</span><em style="background-color: transparent;">itself</em><span style="background-color: transparent;">, feel free to ask one of the development team members on our Discord server, and we'll be happy to discuss.</span></p>
 
 <blockquote class="blockquote">
 
@@ -48,7 +48,7 @@
 
 <ul>
 	<li>You can report bugs and make feature suggestions on our Discord server.</li>
-	<li><a href="https://github.com/Tiny-Foxes">TinyFoxes&nbsp;</a>is a branch of Project Moondance that is coordinating and hosting community-produced content for 5.3, such as translations and other add-ons.</li>
+	<li><a href="https://github.com/Tiny-Foxes">TinyFoxes&nbsp;</a>is a branch of Project Moondance that is coordinating and hosting community-produced content for Project OutFox, such as translations and other add-ons.</li>
 </ul>
 
 <h2>What is 5.2 and why did you skip over it?</h2>
@@ -59,21 +59,19 @@
 
 <h1>Technical</h1>
 
-<h2>My controller doesn't work, but it did on older versions.</h2>
+<h2>My controller doesn't work, but it did on older versions of StepMania.</h2>
 
-<p>Alpha 4.5 switched to using an XInput-compliant input system by default; additional configuration is needed to use unrecognized controllers in this mode. See <a href="/help/controllers">here</a> for more information on how to map your controller for use in XInput mode on StepMania OutFox.</p>
-
-<p><a href="https://projectmoon.dance/news/stepmania-53-alpha-48-released">As of Alpha 4.8.1</a>, we have introduced a HIDAPI-based "Legacy" input system as an option in the Experimental Settings menu. It is similar in behaviour to the input system seen in SM 5.0, but rewritten. If you are having difficulty getting a controller to work in XInput mode or if it performed better under the input handling of previous versions, we recommend that you try it on Legacy mode.</p>
+<p>Currently the game features two modes: a HIDAPI-based "Legacy" input system, similar in behaviour to the input system seen in StepMania 5.0, and an XInput-compliant input system (additional configuration is needed to use unrecognized controllers in this mode, see <a href="/help/controllers">here</a> for more information). If you are unable to map any buttons to the game, try switching modes to Legacy, available as an option in the Experimental Settings menu, or follow the guide mentioned above on how to map your controller with XInput.</p>
 
 <h2>I have a recent/fast processor and my game is having a lot of problems, why is that?</h2>
 
 <p>Parts of the game are so well-optimised now that they're running <em>too fast</em>, and the rest of the game needs to catch up. We will have a proper fix later, but increasing the amount of background activity (i.e. having other programs running in the background, etc.) is a temporary solution.</p>
 
-<h2>Simply Love is not letting me use it on 5.3</h2>
+<h2>Simply Love is not letting me use it!</h2>
 
-<p>Simply Love does work on 5.3, but since version 4.8, a compatibility warning has been shown by the theme if an unsupported version of SM is detected. On 4.8, you can press the Escape button twice to bypass the compatibility warning, but 4.9 blocks this workaround.</p>
+<p>Simply Love does work on 5.3 and since version 5.0, official support has been introduced. With versions 4.8 and 4.9, a compatibility warning is shown by the theme if an unsupported version of StepMania is detected. On 4.8, you can press the Escape button twice to bypass the compatibility warning, but 4.9 blocks this workaround.</p>
 
-<p>The version check can be removed by opening Scripts/SL-SupportHelpers.lua in the theme, and changing the line&nbsp;</p>
+<p>If you prefer utilizing those versions over 5.0, the check can be removed by opening Scripts/SL-SupportHelpers.lua in the theme, and changing the line&nbsp;</p>
 
 <p><code>if not (t[2] and (t[2]==0 or t[2]==1)) then return false end</code></p>
 
@@ -81,9 +79,9 @@
 
 <p><code>if not (t[2] and (t[2]==0 or t[2]==1 or t[2]==3)) then return false end</code></p>
 
-<p>These issues were brought upon by misunderstandings with the theme's developer over our plans for 5.3 (including concerns over the aforementioned lack of public source repository). These concerns <a href="https://github.com/quietly-turning/Simply-Love-SM5/pull/184#issuecomment-717841953">were able to be resolved</a>, although official support for 5.3 will not be worked on until we transition to public source availability.</p>
+<p>These issues were brought upon by misunderstandings with the theme's developer over our plans for Project OutFox (including concerns over the aforementioned lack of public source repository). These concerns <a href="https://github.com/quietly-turning/Simply-Love-SM5/pull/184#issuecomment-717841953">were able to be resolved</a> with version 5.0.</p>
 
-<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> has been created by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with 5.3</p>
+<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> is also available and has been forked by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with Project OutFox</p>
 
 <h1>Linux</h1>
 
@@ -111,6 +109,6 @@
 
 <p>If your log (Installation directory/Logs) shows <code>WDDM1.0</code> or <code>WDDM1.1</code> at the end of the graphics card name:</p><pre><code>00:00.505: Last seen video driver: Intel(R) 82945G Express Chipset Family (Microsoft Corporation - WDDM 1.0)</code></pre>
 
-<p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. StepMania 5.3 will not work on these drivers, as we do not support DirectX anymore (the old D3D renderer that 5.0.12/5.1 has) There is a list of drivers at this site location which may help, but for some of these cards, you need to keep your Windows 7 install disc handy!</p>
+<p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. Project OutFox will not work on these drivers, as we do not support DirectX anymore (the old D3D renderer that 5.0.12/5.1 has) There is a list of drivers at this site location which may help, but for some of these cards, you need to keep your Windows 7 install disc handy!</p>
 
 <p>&nbsp;<a href="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html" rel="noreferrer noopener" tabindex="0" target="_blank" title="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html">https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html</a></p>
