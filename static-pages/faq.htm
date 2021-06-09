@@ -71,7 +71,7 @@
 
 <p>Simply Love does work on Project OutFox and since version 5.0, official support has been introduced. With versions 4.8 and 4.9, a compatibility warning is shown by the theme if an unsupported version of StepMania is detected. On 4.8, you can press the Escape button twice to bypass the compatibility warning, but 4.9 blocks this workaround.</p>
 
-<p>If you prefer utilizing those versions over 5.0, the check can be removed by opening Scripts/SL-SupportHelpers.lua in the theme, and changing the line&nbsp;</p>
+<p>If you prefer utilizing those older SL versions, the check can be removed by opening Scripts/SL-SupportHelpers.lua in the theme, and changing the line&nbsp;</p>
 
 <p><code>if not (t[2] and (t[2]==0 or t[2]==1)) then return false end</code></p>
 
@@ -81,7 +81,7 @@
 
 <p>These issues were brought upon by misunderstandings with the theme's developer over our plans for Project OutFox (including concerns over the aforementioned lack of public source repository). These concerns <a href="https://github.com/quietly-turning/Simply-Love-SM5/pull/184#issuecomment-717841953">were able to be resolved</a> with version 5.0.</p>
 
-<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> is also available and has been forked by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with Project OutFox</p>
+<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> is also available and has been forked by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with Project OutFox.</p>
 
 <h1>Linux</h1>
 
@@ -93,9 +93,10 @@
 
 <h2>I'm having issues launching the game.</h2>
 
-<p>If you receive errors such as "No noteskins found" or other unusual behavior, you will have to change macOS security settings in order for Project OutFox to operate correctly. The OS does not trust unsigned applications, and prevents access to external files unless given manual permission by the user.</p>
+<p>If you receive errors such as "No noteskins found" or other unusual behavior, you will have to change macOS security settings in order for Project OutFox to operate correctly. MacOS performs a process every time a new program has been downloaded called quarantine, which will require Gatekeeper (The OS's security manager) to verify its signature. The OS does not trust unsigned applications, and prevents access to external files unless given manual permission by the user.</p>
 
 <p>To do this, open Terminal and run the following command: <code>xattr -dr com.apple.quarantine /path/to/StepMania</code>, replacing <code>/path/to/StepMania&nbsp;</code>with the path to the directory containing the StepMania executable (manually typing it out, or dragging the folder containing the game executable directly onto the window to fill it automatically).</p>
+<figure class="" data-label="Grabaci%C3%B3n%20de%20pantalla%202021-05-27%20a%20la(s)%2013.35.09.mp4" data-video="https://josevarela.xyz/img/Grabaci%C3%B3n%20de%20pantalla%202021-05-27%20a%20la(s)%2013.35.09.mp4">&nbsp;</figure>
 
 <p>On older builds, macOS Catalina also generated a message stating that the game was requesting permission to &nbsp;receive keystrokes from any application. This was a side effect of previous code that has since been removed.</p>
 
@@ -112,3 +113,7 @@
 <p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. Project OutFox will not work on these drivers, as we do not support DirectX anymore (the old D3D renderer that 5.0.12/5.1 has) There is a list of drivers at this site location which may help, but for some of these cards, you need to keep your Windows 7 install disc handy!</p>
 
 <p>&nbsp;<a href="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html" rel="noreferrer noopener" tabindex="0" target="_blank" title="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html">https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html</a></p>
+
+<p>If you happen to use the Intel HD Graphics 3000 graphics chip, there is a technical workaround below that will restore OpenGL functionality on Windows 10 and could be worth a shot if you're experienced with your operating system.</p>
+
+<p>&nbsp;<a href="https://gist.github.com/rb-dahlb/26f316c5b6089807a139fc44ee69f0d1">https://gist.github.com/rb-dahlb/26f316c5b6089807a139fc44ee69f0d1</a></p>
