@@ -106,14 +106,24 @@
 
 <h1>Windows</h1>
 
-<h2>I have ancient Intel graphics and the game does nothing but crash</h2>
+<h2>I have an ancient graphics card and the game does nothing but crash</h2>
 
 <p>If your log (Installation directory/Logs) shows <code>WDDM1.0</code> or <code>WDDM1.1</code> at the end of the graphics card name:</p><pre><code>00:00.505: Last seen video driver: Intel(R) 82945G Express Chipset Family (Microsoft Corporation - WDDM 1.0)</code></pre>
 
-<p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. Project OutFox will not work on these drivers, as we do not support DirectX anymore (the old D3D renderer that 5.0.12/5.1 has) There is a list of drivers at this site location which may help, but for some of these cards, you need to keep your Windows 7 install disc handy!</p>
+<p>or the log shows <code>Microsoft GDI</code> as the renderer, then you are running the OpenGL-crippled "Windows" driver that is downloaded on a fresh install. Project OutFox will not work on these drivers, as we do not support DirectX 9 anymore (the old D3D renderer that 5.0.12/5.1 uses; keep in mind that it'll be deprecated by Microsoft in the near future).</p>
 
-<p>&nbsp;<a href="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html" rel="noreferrer noopener" tabindex="0" target="_blank" title="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html">https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html</a></p>
+<h3>For Intel users</h3>
 
-<p>If you happen to use the Intel HD Graphics 3000 graphics chip, there is a technical workaround below that will restore OpenGL functionality on Windows 10 and could be worth a shot if you're experienced with your operating system.</p>
+<p>There is a list of drivers at this site location which may help. Unfortunately, for some of these cards, you may need to keep your Windows 7 install disc handy:</p>
+
+<p>&nbsp;<a href="https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html">https://www.intel.com/content/www/us/en/support/articles/000005733/graphics.html</a></p>
+
+<p>If you happen to use the Intel HD Graphics 3000 graphics chip, there is a technical workaround below that will restore OpenGL functionality on Windows 10 and could be worth a shot if you're experienced with your operating system:</p>
 
 <p>&nbsp;<a href="https://gist.github.com/rb-dahlb/26f316c5b6089807a139fc44ee69f0d1">https://gist.github.com/rb-dahlb/26f316c5b6089807a139fc44ee69f0d1</a></p>
+
+<h3>For AMD/ATI users</h3>
+
+<p>You can download the corresponding driver for your graphics card on AMD's website by visiting the link below and searching your model: </p>
+
+<p><a href="https://www.amd.com/en/support">https://www.amd.com/en/support</a></p>
