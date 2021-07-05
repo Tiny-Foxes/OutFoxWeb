@@ -1,2 +1,2 @@
-# MoondanceWeb
-Language files for the Project Moondance website
+# OutFoxWeb
+Language files for the OutFox website
