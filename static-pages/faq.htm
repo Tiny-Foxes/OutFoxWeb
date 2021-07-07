@@ -4,10 +4,6 @@
 
 <p>A project to modernize the StepMania 5.0.12/5.1 codebase to improve its performance and provide enhanced support for modern hardware and operating systems. We are also adding new features, including those being requested by our community, as well as refurbishing its support of non-dance/4-key game types, adding new game types, and so forth.</p>
 
-<h2>What is Project Moondance?</h2>
-
-<p>It is a community/umbrella for Team Rizu (the Project OutFox dev team), covering Project OutFox as well as other related projects.</p>
-
 <h2>Will it still work with my old songs/themes/etc.?</h2>
 
 <p>Project OutFox builds upon the existing StepMania 5.0.12/5.1 beta codebase, and maintaining backwards compatibility with older content is one of our main priorities (in fact, this is one of the reasons why the internal version number is 5.3 rather than skipping to a higher number like 6.0). Content that worked on StepMania 5.0.12/5.1 (including songs, themes, and noteskins) should still work on OutFox. If you experience any issues/weirdness, please report it to us.</p>
@@ -48,7 +44,7 @@
 
 <ul>
 	<li>You can report bugs and make feature suggestions on our Discord server.</li>
-	<li><a href="https://github.com/Tiny-Foxes">TinyFoxes&nbsp;</a>is a branch of Project Moondance that is coordinating and hosting community-produced content for Project OutFox, such as translations and other add-ons.</li>
+	<li><a href="https://github.com/Tiny-Foxes">TinyFoxes&nbsp;</a>is coordinating and hosting community-produced content for Project OutFox, such as translations and other add-ons.</li>
 </ul>
 
 <h2>What is StepMania 5.2 and why did you skip over it?</h2>
@@ -81,13 +77,17 @@
 
 <p>These issues were brought upon by misunderstandings with the theme's developer over our plans for Project OutFox (including concerns over the aforementioned lack of public source repository). These concerns <a href="https://github.com/quietly-turning/Simply-Love-SM5/pull/184#issuecomment-717841953">were able to be resolved</a> with version 5.0.</p>
 
-<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> is also available and has been forked by Project Moondance's TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with Project OutFox.</p>
+<p>An <a href="https://github.com/Tiny-Foxes/Simply-Love-OutFox">unofficial fork</a> is also available and has been forked by TinyFoxes community team, which seeks to perform additional tweaks for compatibility and integrations with Project OutFox.</p>
 
 <h1>Linux</h1>
 
 <h2>I get the error "error while loading shared libraries: libOpenGL.so.0:" on Ubuntu 20.04-based distributions</h2>
 
-<p>Install the <code>libopengl0</code> package. (<code>sudo apt install libopengl0</code>)</p>
+<p>Install either libglvnd and/or libopengl0 based on your distro.</p>
+
+<p>On Debian-based distros, install the <code>libopengl0</code> package. (<code>sudo apt install libopengl0</code>)</p>
+
+<p>On Fedora-based distros, install <code>libglvnd-opengl</code> (<code>sudo dnf install libglvnd-opengl</code>)</p>
 
 <h1>macOS</h1>
 
@@ -124,6 +124,6 @@
 
 <h3>For AMD/ATI users</h3>
 
-<p>You can download the corresponding driver for your graphics card on AMD's website by visiting the link below and searching your model: </p>
+<p>You can download the corresponding driver for your graphics card on AMD's website by visiting the link below and searching your model:</p>
 
 <p><a href="https://www.amd.com/en/support">https://www.amd.com/en/support</a></p>
